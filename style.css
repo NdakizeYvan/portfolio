@@ -1,0 +1,695 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.top {
+     width: 140px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+/* Contact me button in hero */
+.header-text .hire-btn {
+  display: inline-block;   /* keep it inline, not full-width block */
+  margin: 30px 0 0 0;      /* top margin only, no auto-centering */
+}
+.header-text .hire-btn,
+.header-text .projects-btn {
+  display: inline-block;   /* inline so they sit next to each other */
+  margin: 30px 10px 0 10px; /* spacing between them */
+}
+.header-text .projects-btn {
+  
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 40px;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.header-text .projects-btn:hover {
+  transform: scale(1.08);
+  background: #ff004f;
+}
+
+.hire-btn {
+    margin-top: 30px;
+    background: #6c6e64;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 45px;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 0.5s; /* delay for smoother entrance */
+}
+
+.hire-btn:hover {
+    transform: scale(1.08);
+    background: #e60045;
+    box-shadow: 0 0 15px rgba(255, 0, 79, 0.6);
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ------------ABOUT------------*/
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-1 .btn2 {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+font-size: 60px;
+font-weight: 600;
+color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-links::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+   display: none;
+
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*---Progress Bar-----------*/
+.progress-bar {
+    background: #262626;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 8px;
+    height: 20px;
+    width: 35%;   /* reduce width so it aligns with text */
+}
+
+.progress {
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    text-align: right;
+    padding-right: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: width 1s ease-in-out;
+}
+
+.progress.uiux {
+    width: 90%;
+    background: #ff004f;
+}
+
+.progress.web {
+    width: 75%;
+    background: #00c4ff;
+}
+
+.progress.app {
+    width: 70%;
+    background: #61b752;
+}
+
+/*-----------------SERVICES------------------
+
+#services{
+    padding: 30px 0;
+
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/*-------------porfolio-------------*/
+#portfolio{
+    padding: 50px 0;
+}
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* fixed column sizing */
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;       /* keep consistent width */
+    max-width: 350px;  /* optional: cap the size */
+    margin: 0 auto;    /* center items */
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-buttons button {
+    background: #262626;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-buttons button:hover {
+    background: #ff004f;
+}
+.filter-buttons button.active {
+    background: #ff004f;
+    color: #fff;
+}
+/*-----------------Blog Page------------*/
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.blog-card {
+  background: #262626;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.blog-card .category {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff004f;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.blog-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.blog-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.blog-card .meta {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.blog-card .btn {
+  align-self: flex-start;
+  background: #ff004f;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.blog-card .btn:hover {
+  background: #00c4ff;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  background: #262626;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: #ff004f;
+}
+/*-----------------contact-------------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* -------------------------Css for small Screens------*/
+
+nav .fa-solid{
+    display: none;
+}
+/* ------------------------- Improved Responsiveness for Small Screens ------*/
+@media only screen and (max-width: 600px) {
+  /* Hero section */
+  .header-text {
+    margin-top: 80%;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px; /* prevent text touching edges */
+  }
+  .header-text h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  .header-text .hire-btn,
+  .header-text .projects-btn {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  /* Navigation */
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  /* About section */
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .about-col-1 img {
+    width: 80%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+  .about-col-2 {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 15px; /* add side padding */
+    margin-top: 20px;
+  }
+  .sub-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  /* Portfolio single column */
+  .work-list {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .work {
+    max-width: 100%;
+  }
+
+  /* Blog single column */
+  .blog-list {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  /* Contact section full width */
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .contact-left img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+/* Default Dark Mode */
+body {
+  background: #121212;
+  color: #fff;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Light Mode */
+body.light-mode {
+  background: #f9f9f9;
+  color: #222;
+}
+
+/* Headings */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3 {
+  color: #111;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+body.light-mode p {
+  color: #333;
+}
+
+/* Links */
+body.light-mode a {
+  color: #0066cc;
+}
+body.light-mode a:hover {
+  text-decoration: underline;
+}
+
+/* Cards (projects, blog, modal) */
+body.light-mode .blog-card,
+body.light-mode .work,
+body.light-mode .modal-content {
+  background: #fff;
+  color: #222;
+}
+
+/* Buttons */
+body.light-mode .btn {
+  background: #333;
+  color: #fff;
+}
+
+/* Toggle Button Styling */
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: transform 0.3s;
+}
+
+#themeToggle:hover {
+  transform: scale(1.2);
+}

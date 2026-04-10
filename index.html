@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/41ab290042.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="top">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            <button id="themeToggle">🌙</button>
+        </nav>
+        <div class="header-text">
+            <p>Web Designer & Developer</p>
+            <h1>Yvan Ndakize </h1>
+            <a href="#contact" class="btn hire-btn">Contact me</a>
+             <a href="#portfolio" class="btn projects-btn">View My Projects</a>
+        
+        </div>
+    </div>
+</div>
+
+<!------------------About----------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Profile image.jpeg">
+                <a href="images/CV_Ndakize_Yvan.pdf" download class="btn btn2">Download My CV</a>
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Business Information Technology graduate
+with experience supporting operational processes and managing 
+structured records using digital tools.Demonstrates strong
+attention to detail, data accuracy, and the ability to work 
+within structured environments, supported by foundational 
+programming and information systems knowledge.
+Possesses strong analytical and problem-solving skills,
+a collaborative mindset, and a commitment to
+continuous professional development. </p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                    <li><span>Web Development</span><br>Web App Development</li>
+                    <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                </ul>
+            </div>
+
+             <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>11/2025 - 12/2025</span><br>Inventory Management at I&M bank</li>
+
+                    <li><span>05/2025 - 07/2025</span><br>Internship at I&M Bank Rwanda Plc</li>
+
+                </ul>
+            </div>
+
+             <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2022 - 2025</span><br>B.BIT at University of Rwanda</li>
+                    <li><span>2018 - 2021</span><br>Advanced Level Education</li>
+
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------------SERVICES------------------->
+<!----
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div><i class="fa-solid fa-code"></i>
+              <h2>Web Design</h2>
+              <p>ddcdhcbedbhhbc bc db dbc canabcgdcvgbhd
+                bbdddhhs  bhsgegege bgggvcvsacvejb nb jcc n djcbsjcc 
+                 dccscbscscscn  cjcbcnsascc.</p>
+                <a href="#">Learn more</a> 
+            </div>
+            <div><i class="fa-solid fa-crop-simple"></i>
+              <h2>UI/UX Design</h2>
+              <p>ddcdhcbedbhhbc bc db dbc canabcgdcvgbhd
+                bbdddhhs  bhsgegege bgggvcvsacvejb nb jcc n djcbsjcc 
+                 dccscbscscscn  cjcbcnsascc.</p>
+                <a href="#">Learn more</a> 
+            </div>
+            <div><i class="fa-brands fa-app-store"></i>
+              <h2>App Design</h2>
+              <p>ddcdhcbedbhhbc bc db dbc canabcgdcvgbhd
+                bbdddhhs  bhsgegege bgggvcvsacvejb nb jcc n djcbsjcc 
+                 dccscbscscscn  cjcbcnsascc.</p>
+                <a href="#">Learn more</a> 
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<!------------------------PORTFOLIO-------------------->
+<div id="portfolio">
+    <div class="container">
+         <h1 class="sub-title">My Projects</h1>
+         <div class="filter-buttons">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('Web')">Web</button>
+    <button onclick="filterProjects('App')">Apps</button>
+    <button onclick="filterProjects('UI/UX')">UI/UX</button>
+</div>
+        <div class="work-list">
+            <div class="work App">
+               <img src="images/work-6.jpg"> 
+               <div class="layer">
+                <h3>Expense Tracker Web App</h3>
+                <p>A web application that helps users track daily expenses,
+                categorize spending, and visualize financial habits with charts</p>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+               </div>
+            </div>
+            <div class="work Web">
+               <img src="images/work-2.jpg">
+               <div class="layer">
+                <h3>Personal Portfolio Website</h3>
+                <p>A fully responsive personal portfolio site built with HTML, CSS, 
+                   and JavaScript, showcasing modern design and smooth navigation.</p>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+               </div>
+            </div>
+<!--       <div class="work UI/UX">
+               <img src="images/work-6.jpg">
+               <div class="layer">
+                <h3>Task Management App</h3>
+                <p>A simple but functional to-do list app with task creation, editing,
+                  completion tracking, and local storage persistence.</p>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+               </div> 
+            </div> -->
+        </div> 
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-----------BLOG------------------------------->
+<!-- Blog Section -->
+<div id="blog">
+  <div class="container">
+    <h1 class="sub-title">My Blog</h1>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button onclick="filterPosts('all')">All</button>
+      <button onclick="filterPosts('web')">Web Development</button>
+      <button onclick="filterPosts('design')">Design</button>
+      <button onclick="filterPosts('uiux')">UI/UX</button>
+    </div>
+
+    <!-- Blog List -->
+    <div class="blog-list">
+      <div class="blog-card web">
+        <span class="category">Web Development</span>
+ <!---  <img src="images/blog1.jpg" alt="React Applications"> -->
+        <h3>Building Scalable React Applications</h3>
+        <p>Learn best practices for structuring and scaling React applications for production environments.</p>
+        <div class="meta">
+          <span>March 15, 2026</span> • <span>8 min read</span>
+        </div>
+        <a href="blog-post1.html" class="btn">Read More</a>
+      </div>
+
+      <div class="blog-card design uiux">
+        <span class="category">Design</span>
+<!--       <img src="images/blog2.jpg" alt="Modern UI/UX Principles">  -->
+        <h3>Modern UI/UX Design Principles</h3>
+        <p>Exploring the latest trends in user interface and user experience design for web applications.</p>
+        <div class="meta">
+          <span>March 10, 2026</span> • <span>6 min read</span>
+        </div>
+        <a href="blog-post2.html" class="btn">Read More</a>
+      </div>
+
+      <div class="blog-card uiux">
+        <span class="category">UI/UX</span>
+<!--       <img src="images/blog3.jpg" alt="Microinteractions">  --> 
+        <h3>Microinteractions: Small Details, Big Impact</h3>
+        <p>How subtle animations and feedback improve user experience.</p>
+        <div class="meta">
+          <span>March 5, 2026</span> • <span>5 min read</span>
+        </div>
+        <a href="blog-post3.html" class="btn">Read More</a>
+      </div>
+
+      <div class="blog-card web">
+        <span class="category">Web Development</span>
+<!--       <img src="images/blog4.jpg" alt="Accessibility">  --> 
+        <h3>Accessibility in Web Design</h3>
+        <p>Designing inclusive websites that work for everyone.</p>
+        <div class="meta">
+          <span>March 1, 2026</span> • <span>7 min read</span>
+        </div>
+        <a href="blog-post4.html" class="btn">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-------------------CONTACT-------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>ndakizeyvan@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+250791226598</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <a href="images/CV_Ndakize_Yvan.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Yvan. All Rights Reserved</p>
+    </div>
+</div>
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-links");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+   event.currentTarget.classList.add("active-links");
+   document.getElementById(tabname).classList.add("active-tab");
+}
+    
+</script>
+<script>
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyafI0MpaqAbE87TicFtAO6-l48F-zbnf5kfLC7Rgy7bxICEgo8_8CVSOP3w6rGGL0/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+<!------------------Filtering Projects-------------------->
+<script>
+function filterProjects(category) {
+    let projects = document.querySelectorAll('.work');
+    projects.forEach(project => {
+        if (category === 'all' || project.classList.contains(category)) {
+            project.style.display = "block";
+        } else {
+            project.style.display = "none";
+        }
+    });
+
+    // Highlight the active button
+    let buttons = document.querySelectorAll('.filter-buttons button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+}
+</script>
+<!------Script for blogs filter----------->  
+<script>
+function filterPosts(category) {
+  let posts = document.querySelectorAll('.blog-card');
+  posts.forEach(post => {
+    if (category === 'all' || post.classList.contains(category)) {
+      post.style.display = "block";
+    } else {
+      post.style.display = "none";
+    }
+  });
+
+  // Highlight active button
+  let buttons = document.querySelectorAll('.filter-buttons button');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+}
+</script>
+<!-----------Dark/Light Mode------------------>
+<script>
+const toggleBtn = document.getElementById("themeToggle");
+
+// Check saved preference
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-mode");
+  toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  if (document.body.classList.contains("light-mode")) {
+    toggleBtn.textContent = "☀️"; // Light mode icon
+    localStorage.setItem("theme", "light");
+  } else {
+    toggleBtn.textContent = "🌙"; // Dark mode icon
+    localStorage.setItem("theme", "dark");
+  }
+});
+</script>
+
+</body>
+</html>
